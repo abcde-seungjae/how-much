@@ -1,0 +1,10 @@
+export const BASE_URL = process.env.REACT_APP_BACKEND_URL;
+export const MEMBER_URL = `${BASE_URL}/accounts`;
+export const GET = 'GET';
+export const POST = 'POST';
+export const PUT = 'PUT';
+export const DELETE = 'DELETE';
+export const JSON_HEADER = { 'Content-type': 'application/json' };
+export const FORM_HEADER = { 'Content-type': 'multipart/form-data' };
+export const NETWORK_ERROR_MSG = '네트워크 에러가 발생하였습니다.';
+export const PROMOTION_ERROR_MSG = `오류가 발생했습니다. 다시 시도해주세요.`;

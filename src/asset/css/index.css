@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Lobster&family=Mukta:wght@200;300;400;500;600;700;800&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+@layer base {
+  
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('asset/font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400 ;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PretendardB';
+    src:  url('asset/font/Pretendard-Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  html { 
+    @apply text-black-44 bg-hm-beise tracking-tighter;
+  }
+}
