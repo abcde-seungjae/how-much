@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import accounts from './feature/account';
+import accounts from './feature/accounts';
 
 const API = {
   accounts,

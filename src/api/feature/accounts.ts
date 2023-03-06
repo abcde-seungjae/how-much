@@ -2,9 +2,9 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 
 import * as accountsRequest from 'types/api/accountsRequest'
 
-import db from "api/firebase-util"
+import {db} from "api/firebase-util"
 
-export const account = {
+const accounts = {
   postUser: async(params: accountsRequest.postAccountsSignupRequest) => {
     await addDoc(collection(db, "users"), params)
   },
@@ -12,3 +12,5 @@ export const account = {
     await getDocs(collection(db, "users"));
   },
 }
+
+export default accounts

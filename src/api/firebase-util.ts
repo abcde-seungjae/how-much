@@ -6,10 +6,10 @@ import firebaseConfig from "firebaseConfig";
 // See: https://support.google.com/firebase/answer/7015592
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
 
 // Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
-export default db;
+export default {db, app};
