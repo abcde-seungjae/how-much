@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { getAuth } from "firebase/auth";
 import "firebase/auth";
 import { app } from "api/firebase-util";
@@ -14,8 +14,6 @@ import { ReactComponent as Saving } from "asset/image/account/join_savings.svg";
 import { ReactComponent as Square } from "asset/image/account/join_square.svg";
 import { ReactComponent as Triangle } from "asset/image/account/join_triangle.svg";
 import { useNavigate } from "react-router-dom";
-
-const auth = getAuth(app);
 
 function JoinSuccess() {
   const navigate = useNavigate();

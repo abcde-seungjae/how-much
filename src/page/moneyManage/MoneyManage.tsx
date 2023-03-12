@@ -1,22 +1,9 @@
 import React, { useEffect } from "react";
-import { app, db } from "api/firebase-util";
-import {
-  collection,
-  doc,
-  getDocs,
-  query,
-  Timestamp,
-  where,
-} from "firebase/firestore";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useLocation } from "react-router-dom";
 import { DateTime } from "luxon";
 
-const auth = getAuth(app);
-
 function MoneyManage() {
   const { state } = useLocation();
-  const collectionRef = collection(db, "travel");
 
   /**
    * useEffect

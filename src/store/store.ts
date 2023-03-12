@@ -1,10 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { combineReducers, Middleware } from "redux";
+import { combineReducers } from "redux";
 
 import userInfoSlice from "./feature/userInfoSlice";
-
-import API from "api";
 
 const rootReducer = combineReducers({
   userInfo: userInfoSlice.reducer,

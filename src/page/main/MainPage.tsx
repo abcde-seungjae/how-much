@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { ReactComponent as Carousel1 } from "asset/image/main/carousel_1.svg";
-import { ReactComponent as Carousel2 } from "asset/image/main/carousel_2.svg";
 import { ReactComponent as CarouselBg } from "asset/image/main/carousel_bg.svg";
 
 import { getAuth } from "firebase/auth";

@@ -15,7 +15,6 @@ import {
   getDocs,
   query,
   setDoc,
-  Timestamp,
   where,
 } from "firebase/firestore";
 
@@ -68,7 +67,13 @@ function TravelRegist() {
   const [searchChk, setSearchChk] = useState(false);
 
   const [faceArray, setFaceArray] = useState<
-    Array<FunctionComponentElement<any>>
+    Array<
+      FunctionComponentElement<
+        React.SVGProps<SVGSVGElement> & {
+          title?: string | undefined;
+        }
+      >
+    >
   >([]);
   const face = [
     <Face1 key={useId()} className="w-10 h-10 mb-2 mr-4" />,
@@ -217,7 +222,7 @@ function TravelRegist() {
             </h4>
             <div
               className="relative flex flex-col w-full z-1 animate-fadeup"
-              onFocus={(e) => {
+              onFocus={() => {
                 getContries(formData.country);
                 setCountryFocus(true);
               }}
@@ -390,13 +395,7 @@ function TravelRegist() {
               locale={ko}
               selectsRange
               inline
-              renderCustomHeader={({
-                date,
-                prevMonthButtonDisabled,
-                nextMonthButtonDisabled,
-                decreaseMonth,
-                increaseMonth,
-              }) => (
+              renderCustomHeader={({ date, decreaseMonth, increaseMonth }) => (
                 <div
                   style={{
                     margin: 10,
