@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 import axios from "axios";
 import { db } from "api/firebase-util";
-import { getAuth } from "firebase/auth";
-import { collection, doc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 
 function GetContries() {
   // API 호출
@@ -40,7 +39,7 @@ function GetContries() {
       return;
     }
 
-    items.forEach(async (item: any) => {
+    items.forEach(async (item) => {
       const { iso_alp3, country_nm, country_eng_nm, country_iso_alp2 } = item;
 
       await setDoc(doc(db, "countries", iso_alp3), {
