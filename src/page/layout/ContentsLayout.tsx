@@ -7,7 +7,7 @@ function ContentsLayout() {
     <>
       <div className="flex flex-col h-screen">
         <ContentsHeader />
-        <div className="h-full workspace">
+        <div className="h-full px-5 workspace">
           <Outlet />
         </div>
       </div>

@@ -11,6 +11,7 @@ import TravelRegist from "page/travel/TravelRegist";
 import GetContries from "page/travel/GetContries";
 import ContentsLayout from "page/layout/ContentsLayout";
 import Fallback from "page/layout/Fallback";
+import MoneyManage from "page/moneyManage/MoneyManage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<ContentsLayout />}>
             <Route path="/travel" element={<Travel />} />
             <Route path="/travelRegist" element={<TravelRegist />} />
+            <Route path="/moneyManage" element={<MoneyManage />} />
           </Route>
 
           <Route path="/joinSuccess" element={<JoinSuccess />} />

@@ -1,10 +1,10 @@
 import { Timestamp } from "firebase/firestore";
 
 export interface TravelType {
-  id: string;
   country: string;
-  startDate?: Timestamp;
-  endDate?: Timestamp;
+  travelName?: string;
+  startDate: Date;
+  endDate: Date | null;
   member: number;
 }
 

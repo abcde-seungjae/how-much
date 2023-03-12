@@ -48,7 +48,7 @@ function GetContries() {
         country_eng_nm,
         iso_alp3,
         country_iso_alp2,
-        country_img_url: `https://firebasestorage.googleapis.com/v0/b/how-much-73d13.appspot.com/o/${country_iso_alp2}.jpg?alt=media`,
+        country_img_url: `https://firebasestorage.googleapis.com/v0/b/how-much-73d13.appspot.com/o/flag%2F${country_iso_alp2}.jpg?alt=media`,
       });
     });
 
