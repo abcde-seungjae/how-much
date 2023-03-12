@@ -1,7 +1,5 @@
 import React from "react";
-import { getAuth } from "firebase/auth";
 import "firebase/auth";
-import { app } from "api/firebase-util";
 
 import { ReactComponent as Beach } from "asset/image/account/join_beach.svg";
 import { ReactComponent as Circle } from "asset/image/account/join_circle.svg";
