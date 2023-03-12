@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   getAuth,
   createUserWithEmailAndPassword,
-  User,
   updateProfile,
 } from "firebase/auth";
 import "firebase/auth";
@@ -14,13 +13,10 @@ import { ReactComponent as Key } from "asset/image/account/key.svg";
 import { ReactComponent as Mail } from "asset/image/account/mail.svg";
 import { ReactComponent as Name } from "asset/image/account/name.svg";
 import { ReactComponent as Check } from "asset/image/common/check.svg";
-import { useNavigate } from "react-router-dom";
 
 const auth = getAuth(app);
 
 function Join() {
-  const navigate = useNavigate();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordChk, setPasswordChk] = useState("");

@@ -1,23 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { app, db } from "api/firebase-util";
-import {
-  collection,
-  doc,
-  getDocs,
-  query,
-  Timestamp,
-  where,
-} from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { TravelType } from "types/travel";
 import { DateTime } from "luxon";
 
-const auth = getAuth(app);
-
 function Travel() {
   const navigate = useNavigate();
-  const collectionRef = collection(db, "travel");
   const [countriesResult, setCountriesResult] = useState<Array<TravelType>>([]);
   //const docRef = doc(db, "travel", "");
 
